@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block title %}
+Projects I have done
+{% endblock %}
+
+{% block content %}
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="{{url_for('home')}}">CSR</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navbarNav">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url_for('home')}}">Home</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="{{url_for('projects')}}">Projects</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url_for('certificates')}}">Certificates</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url_for('the_big_one')}}">Final Year Project</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url_for('apb')}}">Research Paper</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url_for('resume')}}">CV</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url_for('contact')}}">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page projects-page">
+        <section class="portfolio-block projects-cards">
+            <div class="container-fluid">
+                <div class="heading">
+                    <h2>PROJECTS DONE</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="{{url_for('static',filename='img/salagar.jpg')}}" alt="Card Image"></a>
+                                    <div class="card-body">
+                                        <h6><a href="#">Salagar's Test</a></h6>
+                                        <p class="text-muted card-text"><a href="https://salagar-test.herokuapp.com"><span style="text-decoration: underline; color: blue;">Project Site</span></a><br><br><a href="https://medium.com/featurepreneur/salagars-test-a-feature-to-assess-people-in-ds-fundamentals-5ccfa483c4ca"><span style="text-decoration: underline; color: blue;">Article</span></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="{{url_for('static',filename='img/ner.jpg')}}" alt="Card Image"></a>
+                                    <div class="card-body">
+                                        <h6><a href="#">NER using spaCy</a></h6>    
+                                        <p class="text-muted card-text"><a href="https://github.com/charlescsr/displacify"><span style="text-decoration: underline; color: blue;">Example using Displacy</span></a><br><br><a href="https://csr15.medium.com/custom-ner-from-spacy-template-included-d671826dd755"><span style="text-decoration: underline; color: blue;">Article</span></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="{{url_for('static',filename='img/smalltics.jpg')}}" alt="Card Image"></a>
+                                    <div class="card-body">
+                                        <h6><a href="#">Smalltics</a></h6>
+                                        <p class="text-muted card-text"><a href="https://github.com/charlescsr/smalltics-with-dash"><span style="text-decoration: underline; color: blue;">Source Code(Switched to Dash)</span><br><br></a><a href="https://medium.com/featurepreneur/smalltics-let-the-plots-speak-5a80ece5732d"><span style="text-decoration: underline; color: blue;">Article</span></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="{{url_for('static',filename='img/convren.jpg')}}" alt="Card Image"></a>
+                                    <div class="card-body">
+                                        <h6><a href="#">Imgconvren</a></h6>
+                                        <p class="text-muted card-text"><a href="https://github.com/charlescsr/imgconvren"><span style="text-decoration: underline; color: blue;">Source Code</span></a><br><br><a href="https://csr15.medium.com/imgconvren-package-to-help-with-converting-and-renaming-your-images-74f713686031"><span style="text-decoration: underline; color: blue;">Article</span></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="{{url_for('static',filename='img/augly.png')}}" alt="Card Image"></a>
+                                    <div class="card-body">
+                                        <h6><a href="#">POC using <u><a href="https://github.com/facebookresearch/AugLy">Augly</a></u></a></h6>
+                                        <p class="text-muted card-text"><a href="https://github.com/charlescsr/augly-gradio-app"><span style="text-decoration: underline; color: blue;">Source Code</span></a><br><br><a href="https://augly-overlay-image.herokuapp.com/"><span style="text-decoration: underline; color: blue;">Website</span></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="{{url_for('static',filename='img/qa.png')}}" alt="Card Image"></a>
+                                    <div class="card-body">
+                                        <h6><a href="#">QA answering from passage</a></h6>
+                                        <p class="text-muted card-text"><a href="https://github.com/charlescsr/unified-qa-with-gradio"><span style="text-decoration: underline; color: blue;">Source Code</span></a><br><br><a href="https://qa-test-allen.herokuapp.com/"><span style="text-decoration: underline; color: blue;">Website</span></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="{{url_for('static',filename='img/stonks.png')}}" alt="Card Image"></a>
+                                    <div class="card-body">
+                                        <h6><a href="#">Stock Forecasting using <u><a href="https://facebookresearch.github.io/Kats/">Kats</a></u></a></h6>
+                                        <p class="text-muted card-text"><a href="https://github.com/charlescsr/stock-forecasting-with-kats"><span style="text-decoration: underline; color: blue;">Source Code</span></a><br><br><a href="https://stock-forecasting-kats.herokuapp.com/"><span style="text-decoration: underline; color: blue;">Website</span></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="{{url_for('static',filename='img/flaml.png')}}" alt="Card Image"></a>
+                                    <div class="card-body">
+                                        <h6><a href="#">Pickle File Generator using <u><a href="https://github.com/microsoft/FLAML">FLAML</a></u></a></h6>
+                                        <p class="text-muted card-text"><a href="https://github.com/charlescsr/pickle-generator-flaml"><span style="text-decoration: underline; color: blue;">Source Code</span></a><br><br><a href="https://pickle-generator-automl.herokuapp.com/"><span style="text-decoration: underline; color: blue;">Website</span></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="{{url_for('static',filename='img/f1.png')}}" alt="Card Image"></a>
+                                    <div class="card-body">
+                                        <h6><a href="#">Qualifying Comparison using <u><a href="https://github.com/theOehrly/Fast-F1">Fast-F1</a></u></a></h6>
+                                        <p class="text-muted card-text"><a href="https://github.com/charlescsr/fastf1-with-streamlit"><span style="text-decoration: underline; color: blue;">Source Code</span></a><br><br><a href="https://share.streamlit.io/charlescsr/fastf1-with-streamlit/app.py"><span style="text-decoration: underline; color: blue;">Website</span></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover" src="{{url_for('static',filename='img/pycaret.png')}}" alt="Card Image"></a>
+                                    <div class="card-body">
+                                        <h6><a href="#">Census Income Prediction using <u><a href="https://github.com/pycaret/pycaret">PyCaret</a></u></a></h6>
+                                        <p class="text-muted card-text"><a href="https://github.com/charlescsr/income-prediction-pycaret"><span style="text-decoration: underline; color: blue;">Source Code</span></a><br><br><a href="https://share.streamlit.io/charlescsr/income-prediction-pycaret/app.py"><span style="text-decoration: underline; color: blue;">Website</span></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}
+Charles Samuel R
+{% endblock %}
+
+{% block content %}
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="{{url_for('home')}}">CSR</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navbarNav">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="{{url_for('home')}}">Home</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url_for('projects')}}">Projects</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url_for('certificates')}}">Certificates</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url_for('the_big_one')}}">Final Year Project</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url_for('apb')}}">Research Paper</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url_for('resume')}}">CV</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url_for('contact')}}">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page lanidng-page">
+        <section class="portfolio-block block-intro">
+            <div class="container">
+                <div class="avatar" style="background-image: url(&quot;{{url_for('static',filename='img/IMG_20191103_175159.jpg')}}&quot;);"></div>
+                <div class="about-me">
+                    <p>Hello! My name is <strong>Charles Samuel R</strong>. I have a passion for Data Science and I want to use it to good effect everytime to be the best version of myself.
+                        You can find the rest of my details in the top right corner of the site.</p>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio-block photography">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="#"></a></div>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio-block skills">
+            <div class="container">
+                <div class="heading">
+                    <h2>Special Skills</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card special-skill-item border-0">
+                            <div class="card-header bg-transparent border-0"><i class="icon ion-ios-lightbulb-outline"></i></div>
+                            <div class="card-body">
+                                <h3 class="card-title">Persistent</h3>
+                                <p class="card-text">I always make sure all problems are resolved before moving on. My curiosity is reason for that</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card special-skill-item border-0">
+                            <div class="card-header bg-transparent border-0"><i class="icon ion-stats-bars"></i></div>
+                            <div class="card-body">
+                                <h3 class="card-title">Data Science</h3>
+                                <p class="card-text">I have learned the different aspects of Data Science using Python as my major language<br></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card special-skill-item border-0">
+                            <div class="card-header bg-transparent border-0"><i class="icon ion-ios-star-outline"></i></div>
+                            <div class="card-body">
+                                <h3 class="card-title">Web Design</h3>
+                                <p class="card-text">I know about the Flask framework and also REST which has helped me to develop efficient web apps and/or API's and deploy them easily</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="portfolio-block website gradient">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-12 col-lg-5 offset-lg-1 text">
+                    <h3>Website Project</h3>
+                    <p>This website itself is a project that I have done and deployed using Flask and Heroku.</p>
+                </div>
+                <div class="col-md-12 col-lg-5">
+                    <div class="portfolio-laptop-mockup">
+                        <div class="screen">
+                            <div class="screen-content" style="background-image:url(&quot;{{url_for('static',filename='img/image6.png')}}&quot;);"></div>
+                        </div>
+                        <div class="keyboard"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

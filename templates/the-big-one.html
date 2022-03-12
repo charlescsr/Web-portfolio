@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}
+My Final Year Project
+{% endblock %}
+
+{% block content %}
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-white portfolio-navbar gradient">
+        <div class="container"><a class="navbar-brand logo" href="{{url_for('home')}}">CSR</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarNav"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navbarNav">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url_for('home')}}">Home</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url_for('projects')}}">Projects</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url_for('certificates')}}">Certificates</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="{{url_for('the_big_one')}}">Final Year Project</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url_for('apb')}}">Research Paper</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url_for('resume')}}">CV</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url_for('contact')}}">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page project-page">
+        <section class="portfolio-block project">
+            <div class="container">
+                <div class="heading">
+                    <h2>Platform to generate code for a dataset and ML model</h2>
+                </div>
+                <div class="image" style="background-image:url(&quot;{{url_for('static', filename='img/ivd.png')}}&quot;);"></div>
+                <div class="row">
+                    <div class="col-12 col-md-6 offset-md-1 info">
+                        <h3>Description</h3>
+                        <p>This web application helps in generating web application for a dataset and model which can be shown as a web application.</p>
+                        <p>It does not rely on the Software Development knowledge of the user. Just give the cleaned dataset and select the model and this will do the rest.</p>
+                    </div>
+                    <div class="col-12 col-md-3 offset-md-1 meta">
+                        <div class="tags"><span class="meta-heading">Source Code</span><a href="https://github.com/charlescsr/implogn-visintei-datifing">Flask Application</a><a href="https://github.com/charlescsr/train_server">FastAPI Server</a></div>
+                        <div class="tags"><span class="meta-heading">Main Website</span><a href="https://implogn-visintei-datifing.herokuapp.com/">Flask Website</a><span class="meta-heading">Date</span><span>21-02-2021</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
