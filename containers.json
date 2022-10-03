@@ -1,6 +1,6 @@
 {
     "flask": {
-        "image": ":csr-site.aws-site.1",
+        "image": ":csr-site.aws-site.2",
         "ports": {
             "5000": "HTTP"
         }
