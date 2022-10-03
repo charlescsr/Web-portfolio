@@ -54,4 +54,4 @@ def send():
     return redirect("mailto:rcharles.samuel99@gmail.com?subject="+str(sub)+"&body="+str(mess))
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')
